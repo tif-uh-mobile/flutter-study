@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121171507_IkhsanJihadi/nim_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Profile Student'),
     );
   }
 }
@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +38,68 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 32),
+            width: 190.0,
+            height: 190.0,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                    fit: BoxFit.fill, image: AssetImage('assets/Sanss.png'))),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Container(
+            width: 250,
+            height: 60,
+            decoration: BoxDecoration(color: Colors.blue),
+            child: Center(
+              child: Text(
+                "Ikhsan Jihadi",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 12),
+            width: 250,
+            height: 60,
+            decoration: BoxDecoration(color: Colors.blue),
+            child: Center(
+              child: Text(
+                "Ngoding",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 12, bottom: 20),
+            width: 250,
+            height: 60,
+            decoration: BoxDecoration(color: Colors.blue),
+            child: Center(
+              child: Text(
+                "BLUE",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          NavigateButton(
+              name: 'D121171507-Ikhsan Jihadi', page: NimProfileScreen())
         ],
       )),
     );
@@ -48,16 +107,16 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page})
+      : super(key: key);
 
   final Widget page;
   final String name;
 
-
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(primary: Colors.lightBlueAccent),
       child: Text(name),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
@@ -65,4 +124,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
