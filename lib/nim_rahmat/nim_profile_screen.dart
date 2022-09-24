@@ -12,7 +12,7 @@ class _NimProfileScreenState extends State<NimProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Nim Name Profile Screen'),
+        title: const Text('Nim Name Profile Screen'),
       ),
     );
   }

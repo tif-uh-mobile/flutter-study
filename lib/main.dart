@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201015_rifqy/D121201015_profile_screen.dart';
 import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
 
 void main() {
@@ -30,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Column(
         children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+          NavigateButton(
+            name: 'Nim-Name',
+            page: NimProfileScreen(),
+          ),
+          NavigateButton(
+            name: 'D121201015-Muhammad Rifqy Yudhiestra R.',
+            page: D121201015ProfileScreen(),
+          ),
         ],
       )),
     );
@@ -48,21 +55,27 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({
+    Key? key,
+    required this.name,
+    required this.page,
+  }) : super(key: key);
 
   final Widget page;
   final String name;
 
-
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       child: Text(name),
       onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (ctx) => page,
+          ),
+        );
       },
     );
   }
 }
-
