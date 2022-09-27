@@ -22,11 +22,22 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
+          
             child: Center(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
               SizedBox(height: 75),
+
+             CircleAvatar(
+                radius:80,
+                backgroundColor: Color.fromARGB(255, 255, 0, 0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8), // Border radius
+                  child: ClipOval(child: Image.network('https://media-exp1.licdn.com/dms/image/C4D03AQHVY3sCFF-Lzw/profile-displayphoto-shrink_200_200/0/1636239448855?e=1669248000&v=beta&t=Nkb1NX4bNKbeCfe1KSbdPfsGa3rZ6dOaa-7L5AASBP0')),
+                ),
+              ),
+              SizedBox(height: 10),
 
               Text(
                 'Welcome to My World',
@@ -34,15 +45,16 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 40,
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Text(
                 'Sign In to continue',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 40),
 
+           
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: TextField(
