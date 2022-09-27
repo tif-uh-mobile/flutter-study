@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:flutter/services.dart';
+import 'package:tif_flutter/D121201016_Zid Irsyadin Sartono Wijaogy/D121201016_profile_screen.dart';
+import 'package:tif_flutter/D121201016_Zid%20Irsyadin%20Sartono%20Wijaogy/login_page.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,58 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue.shade300,
+        dividerColor: Colors.black,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoginPage(),
     );
   }
 }
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-          child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
-        ],
-      )),
-    );
-  }
-}
-
-class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
-
-  final Widget page;
-  final String name;
-
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton (
-      child: Text(name),
-      onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
-      },
-    );
-  }
-}
-
