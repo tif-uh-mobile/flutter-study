@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 10),
               Text(
-                'Login to continue',
+                'Sign In to continue',
                 style: TextStyle(
                   fontSize: 18,
                 ),
@@ -85,31 +85,31 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 10),
 
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: EdgeInsets.all(25.0),
                   child: Container(
-                      
                       child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ProfilePage()),
-                          );
-                        },
-                        child: Center(
-                          child: Text(
-                            'Sign In',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
+                       onPressed: () {
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(
+                             builder: (context) => ProfilePage(),
+                           ),
+                         );
+                       },
+                        child: new Text('Sign In', style: new TextStyle(fontSize: 15)),
+                        style: ElevatedButton.styleFrom(
+                          primary: Color.fromARGB(255, 0, 140, 255),
+                          onPrimary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
                           ),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 50, vertical: 10),
                         ),
                       ),
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 50),
             ]))),
       ),
     );
