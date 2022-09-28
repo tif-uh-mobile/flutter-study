@@ -39,7 +39,7 @@ class Profiles extends StatelessWidget {
                     },
                     child :CircleAvatar(
                       radius: 70,
-                      backgroundImage:AssetImage("assets/fotogw.jpg"),
+                      backgroundImage:AssetImage("assets/DeluPicture.jpg"),
                     ),
                   ),
                   Container(
@@ -145,7 +145,7 @@ class _AboutMeState extends State<AboutMe>{
                         width: 125,
                         height: 155,
                         decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage('assets/fotogw.jpg'),
+                          image: DecorationImage(image: AssetImage('assets/DeluPicture.jpg'),
                             fit: BoxFit.cover,
                           ),
                         ),
