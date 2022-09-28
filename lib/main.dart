@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201066_ThesalonikaAprilia/D121201066_profile_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -38,8 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              NavigateButton(name: 'D121201066-Thesalonika Aprilia', page: D121201066ProfileScreen())
+            ],
+          )),
     );
   }
 }
