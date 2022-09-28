@@ -13,7 +13,7 @@ class Profiles extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/bg2.jpg"),
+            image: AssetImage("assets/background1.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -27,7 +27,7 @@ class Profiles extends StatelessWidget {
               width: 200,
               height: 330,
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white54,
                   borderRadius: BorderRadius.all(Radius.circular(5))),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,7 +54,7 @@ class Profiles extends StatelessWidget {
                     width: 200,
                     height: 25,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 1),
+                      border: Border.all(color: Colors.black87, width: 2),
                       borderRadius: BorderRadius.all(Radius.circular(9)),
                     ),
                   ),
@@ -70,7 +70,7 @@ class Profiles extends StatelessWidget {
                     width: 200,
                     height: 25,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 1),
+                      border: Border.all(color: Colors.black87, width: 2),
                       borderRadius: BorderRadius.all(Radius.circular(9)),
                     ),
                   ),
@@ -87,7 +87,7 @@ class Profiles extends StatelessWidget {
                     width: 200,
                     height: 25,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black, width: 1),
+                      border: Border.all(color: Colors.black87, width: 2),
                       borderRadius: BorderRadius.all(Radius.circular(9)),
                     ),
                   ),
@@ -118,7 +118,7 @@ class _AboutMeState extends State<AboutMe>{
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/bgtek.jpg"),
+            image: AssetImage("assets/background.jpg"),
             fit: BoxFit.cover,
           ),
         ),
