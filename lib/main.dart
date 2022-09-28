@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201105_Dewa/D121201105_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +40,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Column(
         children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+          NavigateButton(name: 'Nim-Nama', page: NimProfileScreen()),
+          NavigateButton(name: 'D121201105-Dewa', page: BioDewa()),
         ],
       )),
     );
@@ -48,16 +49,15 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page})
+      : super(key: key);
 
   final Widget page;
   final String name;
 
-
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       child: Text(name),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
@@ -65,4 +65,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
