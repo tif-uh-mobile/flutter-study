@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201102_Reiky Efabras Wahyu Wijaya/D121201102_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Column(
         children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+          NavigateButton(name: 'D121201102-Reiky Efabras Wahyu Wijaya', page: D121201102ProfileScreen())
         ],
       )),
     );
