@@ -95,7 +95,7 @@ class HomePage extends StatelessWidget {
                     ),
                     child: const Center(
                         child: Text(
-                            'Seseorang yang gemar editing, main instrumen musik, dan gaming.',
+                            'Seseorang yang gemar editing, music instrument, & gaming.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontFamily: 'Poppins',
@@ -272,12 +272,11 @@ class BackGrad extends StatelessWidget {
                     heightBox: 300,
                     padding: EdgeInsets.only(top: 20, left: 10, right: 10),
                     child: Text(
-                      'Saya adalah seorang mahasiswa semester 5 di Universitas Hasanuddin Fakultas Teknik Jurusan Teknik Informatika.\n\n'
-                      'Saat ini, saya sedang tertarik dibidang Backend Developer dan Machine Learning.\n\n'
-                      'Pendidikan:\n'
-                      '- SDN 214 Lolisang (2008 - 2014)\n'
-                      '- SMPN 23 Bulukumba (2014 - 2017)\n'
-                      '- SMAN 5 Bulukumba (2017 - 2020)\n',
+                      '\nberprinsip untuk tidak berprinsip merupakan ambisi yang serius\n'
+                      'tetap melangkah maju, hadapi apa yang sedang dihadapi, selalu siap\n'
+                      'akan apa yang akan segera terjadi\n'
+                      'prinsip terkadang akan membelenggu\n\n'
+                      'Be calm, and reasonable person.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
