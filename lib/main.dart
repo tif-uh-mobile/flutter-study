@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201059_Hadriana-Nurul-Pertiwi//D121201059_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -39,10 +39,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
-        ],
-      )),
+            children: const [
+              Padding(padding: EdgeInsets.only(top: 50)),
+              NavigateButton(name: 'D121201059 - Hadriana Nurul Pertiwi', page: D121201059ProfileScreen())
+            ],
+          )),
     );
   }
 }
@@ -59,10 +60,12 @@ class NavigateButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton (
       child: Text(name),
+      style: ElevatedButton.styleFrom(
+      backgroundColor: Color(0xff7986cb),
+      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20)),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
       },
     );
   }
 }
-
