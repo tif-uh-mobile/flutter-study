@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201064_Mutiah-Chaerunnisa/D121201064_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Tugas 1',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'D121201064_profile screen'),
     );
   }
 }
@@ -30,21 +30,85 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  get children => null;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlue,
+        leading: const Icon(Icons.account_circle_rounded),
         title: Text(widget.title),
-      ),
-      body: Center(
-          child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+      ),body: Center(
+      child: Column(
+        children: [
+          new GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (ctx) => D121201064ProfileScreen()));
+            },
+            child: Container(
+              margin: const EdgeInsets.only(top: 50),
+              width: 200,
+              height: 200,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage("assets/D121201064.jpeg"),
+                    fit: BoxFit.fill,
+                  )
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 40),
+            width: 300,
+            height: 50,
+            decoration:  BoxDecoration(
+              border: Border.all(
+
+                color: Colors.lightBlue,
+                width: 5,
+              ),
+            ),
+            child: Center(
+              child: Text("Mutiah Chaerunnisa",style: TextStyle(fontSize: 18),),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 14),
+            width: 300,
+            height: 50,
+            decoration:  BoxDecoration(
+              border: Border.all(
+                color: Colors.lightBlue,
+                width: 5,
+              ),
+            ),
+            child: Center(
+              child: Text("Bermain",style: TextStyle(fontSize: 18),),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 14),
+            width: 300,
+            height: 50,
+            decoration:  BoxDecoration(
+              border: Border.all(
+                color: Colors.lightBlue,
+                width: 5,
+              ),
+            ),
+            child: Center(
+              child: Text("Biru",style: TextStyle(fontSize: 18),),
+            ),
+          )
         ],
-      )),
+      ),
+    ),
     );
   }
+
 }
 
 class NavigateButton extends StatelessWidget {
@@ -65,4 +129,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
