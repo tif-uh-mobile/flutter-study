@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201074_LEEVIO_WICAKSONO_PURNAMAWANG/D121201074_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Profile'),
     );
   }
 }
@@ -31,6 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  get children => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,10 +40,69 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
-        ],
-      )),
+        children: [
+          new GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (ctx)=> D121201074ProfileScreen()));
+            },
+              child: Container(
+               margin: const EdgeInsets.only(top: 50),
+               width: 150,
+               height: 150,
+               decoration: BoxDecoration(
+                 shape: BoxShape.circle,
+                 image: DecorationImage(
+                   image: AssetImage("assets/pic_profile.jpg"),
+                   fit: BoxFit.fill,
+                 )
+               ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 14),
+              width: 300,
+              height: 50,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 5,
+                ),
+              ),
+              child: Center(
+                child: Text("Leevio W. P.", style: TextStyle(fontSize: 16),),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 14),
+              width: 300,
+              height: 50,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 5,
+                ),
+              ),
+              child: Center(
+                child: Text("Main", style: TextStyle(fontSize: 16),),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 14),
+              width: 300,
+              height: 50,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 5,
+                ),
+              ),
+              child: Center(
+                child: Text("Putih", style: TextStyle(fontSize: 16),),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
