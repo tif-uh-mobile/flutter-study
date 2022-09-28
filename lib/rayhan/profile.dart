@@ -130,7 +130,7 @@ class _AboutMeState extends State<AboutMe>{
               padding: EdgeInsets.all(5),
               margin: EdgeInsets.all(10),
               width: 500,
-              height: 580,
+              height: 500,
               decoration: BoxDecoration(
                   color: Colors.black54,
                   borderRadius: BorderRadius.all(Radius.circular(5))),
@@ -229,7 +229,7 @@ class _AboutMeState extends State<AboutMe>{
                       ),
                     ),
                     width: 380,
-                    height: 370,
+                    height: 270,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(5)),
