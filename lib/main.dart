@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201061_MNoorRaviDeevan/D121201061_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Profile D121201061',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Profile App'),
     );
   }
 }
@@ -38,9 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child: Column(
+        child: Column(
         children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+          NavigateButton(name: 'M. Noor Ravi Deevan (D121201061)', page: NimProfileScreen())
         ],
       )),
     );
