@@ -12,7 +12,7 @@ class Body extends StatelessWidget{
           height: 115,
           width: 115,
           child : CircleAvatar(
-            backgroundImage: AssetImage("images/pasFoto.jpg"),
+            backgroundImage: AssetImage("lib/D121201043_Alexander Gosal/images/pasFoto.jpg"),
           )
         ),
         Card(
