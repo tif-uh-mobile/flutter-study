@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/d121201051_jalal/d121201051_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -35,14 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-          child: Column(
-        children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+        actions: [    
+          IconButton(
+            onPressed: () => {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return const NimProfileScreen();
+              }))
+            } ,
+            icon: Image.asset('assets/img/rem-circle.png')),
         ],
-      )),
+        title: const Text('Welcome Back!', ),
+      ),
     );
   }
 }
