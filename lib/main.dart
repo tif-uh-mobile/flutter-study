@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portofolio_test1/D121201046_Muh_Fauzan_Azima/D121201046_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: const [
+          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+        ],
       )),
     );
   }
