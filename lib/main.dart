@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201072_Muhammad Ilham Nur Furqan/D121201072_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -18,12 +18,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
   final String title;
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -38,7 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: const [
+          NavigateButton(name: 'D121201072_Muhammad Ilham Nur Furqan', page: D121201072ProfileScreen())
+        ],
       )),
     );
   }
@@ -46,7 +45,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 class NavigateButton extends StatelessWidget {
 
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page})
+      : super(key: key);
 
   final Widget page;
   final String name;
@@ -54,7 +54,8 @@ class NavigateButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    //return ElevatedButton (
+    return ElevatedButton(
       child: Text(name),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
@@ -62,4 +63,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
