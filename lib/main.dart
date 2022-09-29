@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201006_Nur Islamiah Rifai/D121201006_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'My Profile',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'My Profile'),
     );
   }
 }
@@ -38,8 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              SizedBox(height: 25),
+              Text('Welcome to My Profile!', style: TextStyle(
+                  color: Colors.black, fontSize: 30),),
+              SizedBox(height: 30),
+              NavigateButton(name: 'D121201006 - Nur Islamiah Rifai', page: D121201006ProfileScreen())
+            ],
+          )),
     );
   }
 }
@@ -62,4 +70,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
