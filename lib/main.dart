@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201107_Atira Septiara/D121201107.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -38,7 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: const [
+          NavigateButton(name: 'D121201107- Atira Septiara', page: D121201005ProfileScreen())
+        ],
       )),
     );
   }
