@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201017_AzzahraBeladinaShaff/D121201017.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'My Profil',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Contoh Profil Saya'),
     );
   }
 }
@@ -37,8 +39,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child: Column(
-        children: [],
+          child: Column( 
+        children: const [
+          Padding(
+            padding: EdgeInsets.all(15.0),
+            child: NavigateButton(name: 'D121201017_Azzahra Beladina Shaff', page: D121201005ProfileScreen()),
+          )
+        ],
       )),
     );
   }
