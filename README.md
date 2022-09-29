@@ -1,17 +1,8 @@
 # tif_flutter
 
-A new Flutter project.
+A new Flutter project by IPWK.
 
-## Getting Started
-
-Please create your assignment folder in
-````
-lib/your_name/
-````
-
-and reference it under `lib/main.dart`
-
-for example
-````
-NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
-````
+# 
+Nama  : I Putu Wahyu Kusuma  
+NIM   : D121201030  
+Kelas : B
