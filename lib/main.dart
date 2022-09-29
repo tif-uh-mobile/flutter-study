@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'D121201004_Fauzan-Adithya-ZM/D121201004_profile_screen.dart';
+import 'nim_rahmat/nim_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: [
+          NavigateButton(name: 'Nim-Name', page: NimProfileScreen()),
+          NavigateButton(
+              name: 'D121201004-Fauzan Adithya Zuchairul Mursalin',
+              page: D121201004ProfileScreen())
+        ],
       )),
     );
   }
