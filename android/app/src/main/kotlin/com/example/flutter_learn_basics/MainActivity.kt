@@ -1,4 +1,4 @@
-package tif.uh.tif_flutter
+package com.example.flutter_learn_basics
 
 import io.flutter.embedding.android.FlutterActivity
 
