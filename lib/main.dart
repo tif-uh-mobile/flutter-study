@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201060_Nabila/D121201060_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,23 +38,24 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              NavigateButton(name: 'D121201060-Nabila', page: PageSatu())
+            ],
+          )),
     );
   }
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page})
+      : super(key: key);
 
   final Widget page;
   final String name;
 
-
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       child: Text(name),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
@@ -62,4 +63,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
