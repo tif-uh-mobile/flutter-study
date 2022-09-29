@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201009_ichsan/D121201009_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,14 +8,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'MyProfile',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blue.shade300,
+        dividerColor: Colors.black,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'My Profile'),
     );
   }
 }
@@ -37,20 +42,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-          child: Column(
-        children: [],
-      )),
+        child: Column(
+          children: const[
+            SizedBox(height: 25),
+            Text('Welcome to My Profile', style: TextStyle(
+                color: Colors.black, fontSize: 30),),
+            SizedBox(height: 30),
+            NavigateButton(name: 'D121201009 - A. Ichsan Mudatsir', page: D121201009ProfileScreen())
+          ],
+        ),
+      ),
     );
   }
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page}) : super(key: key);
 
   final Widget page;
   final String name;
-
 
   @override
   Widget build(BuildContext context) {
@@ -62,4 +72,5 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
+
 
