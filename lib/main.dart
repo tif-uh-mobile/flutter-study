@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/d121201003_zulfiqrysaadputra/d121201003_profile_screen.dart';
 import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
 
 void main() {
@@ -40,7 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
           child: Column(
         children: const [
-          NavigateButton(name: 'Nim-Name', page: NimProfileScreen())
+          NavigateButton(name: 'Nim-Name', page: NimProfileScreen()),
+          NavigateButton(name: 'D121201003-Zulfiqry Saadputra', page: D121201003ProfileScreen())
         ],
       )),
     );
