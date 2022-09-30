@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201100_Muhammad Thoriq Az Dzaky/D121201100_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: const [
+          NavigateButton(name: 'Nim-Name', page: NimProfileScreen()),
+          NavigateButton(name: 'D121201100-Muhammad Thoriq Az Dzaky', page: D121201100ProfileScreen()),
+        ],
       )),
     );
   }
