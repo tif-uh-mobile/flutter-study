@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tif_flutter/d121201003_zulfiqrysaadputra/d121201003_profile_screen.dart';
 import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/d121201003_zulfiqrysaadputra/d121201003_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
