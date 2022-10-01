@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tif_flutter/nim_rahmat/nim_profile_screen.dart';
+import 'package:tif_flutter/D121201012_Muh_Faisal_Fajri/D121201012_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
