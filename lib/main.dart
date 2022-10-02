@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201096_Yahdi-Arrazi//D121201096_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,8 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              NavigateButton(name: 'D121201096 - Yahdi Arrazi', page: D121201096ProfileScreen())
+            ],
+          )),
     );
   }
 }
@@ -62,4 +65,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
