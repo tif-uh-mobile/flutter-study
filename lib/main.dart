@@ -42,66 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
         //  NavigateButton(
         //      name: 'D121201025-Gabriel Dylan', page: NimProfileScreen())
         children: [
-          Container(
-            margin: EdgeInsets.only(top: 32),
-            width: 190.0,
-            height: 190.0,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/Untitled31.png'))),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Container(
-            width: 250,
-            height: 60,
-            decoration: BoxDecoration(color: Colors.grey),
-            child: Center(
-              child: Text(
-                "Gabriel Dylan Valentino",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 12),
-            width: 250,
-            height: 60,
-            decoration: BoxDecoration(color: Colors.grey),
-            child: Center(
-              child: Text(
-                "Membaca",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 12, bottom: 20),
-            width: 250,
-            height: 60,
-            decoration: BoxDecoration(color: Colors.grey),
-            child: Center(
-              child: Text(
-                "Abu-abu",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ),
           NavigateButton(
               name: 'D121201025-Gabriel Dylan', page: NimProfileScreen())
         ],
