@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201084_Andi Dhany Indra Pratama/D121201084_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
+        children: const [
+          NavigateButton(name: 'D121201084-Andi Dhany Indra Pratama', page: D121201084ProfileScreen())
+        ],
       )),
     );
   }
