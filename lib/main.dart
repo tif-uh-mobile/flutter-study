@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/D121201069_Marselinus-Jeffry-Paramma/D121201069_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,8 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              NavigateButton(name: 'D121201069_Marselinus-Jeffry-Paramma', page: D121201069ProfileScreen())
+            ],
+          )),
     );
   }
 }
@@ -62,4 +65,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
