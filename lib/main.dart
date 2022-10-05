@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201031_Akram_Firmansyah/D121201031_ProfilePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Home'),
     );
   }
 }
@@ -29,32 +32,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-          child: Column(
-        children: [],
-      )),
-    );
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
+        body: const Center(
+          child: NavigateButton(
+            name: "Akram Firmansyah",
+            page: ProfilePage(),
+          )
+        ));
   }
 }
 
 class NavigateButton extends StatelessWidget {
-
-  const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
+  const NavigateButton({Key? key, required this.name, required this.page})
+      : super(key: key);
 
   final Widget page;
   final String name;
 
-
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       child: Text(name),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (ctx) => page));
@@ -62,4 +64,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
