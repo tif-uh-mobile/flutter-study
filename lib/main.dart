@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tif_flutter/D121201049_Muhammad Fajar Madani/D121201049_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Fajar Home Page'),
     );
   }
 }
@@ -38,8 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+            children: const [
+              NavigateButton(name: 'Muhammad Fajar Madani', page: D121201049ProfileScreen())
+            ],
+          )),
     );
   }
 }
@@ -62,4 +65,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
