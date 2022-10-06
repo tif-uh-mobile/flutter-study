@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_flutter/D121201083_Hendra-Adi-Saputra/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Profile',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+        home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -29,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,20 +36,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: Column(
-        children: [],
-      )),
+          children: const [
+           NavigateButton(name: 'D121201088_Hendra Adi Saputra', page: ProfilScreen())
+         ],
+       )),
     );
   }
 }
 
 class NavigateButton extends StatelessWidget {
-
   const NavigateButton({Key? key, required this.name, required  this.page}) : super(key: key);
-
   final Widget page;
   final String name;
-
-
   @override
   Widget build(BuildContext context) {
     return ElevatedButton (
@@ -62,4 +58,3 @@ class NavigateButton extends StatelessWidget {
     );
   }
 }
-
